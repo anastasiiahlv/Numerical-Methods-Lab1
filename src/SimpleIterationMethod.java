@@ -19,7 +19,7 @@ public class SimpleIterationMethod {
                     i,
                     x_n_next,
                     Math.abs(x_n_next - x_n),
-                    func(x_n_next));  // f(x_n)
+                    func(x_n_next));
 
             if (Math.abs(x_n_next - x_n) <= epsilon && !is_result) {
                 iterationCount = i;
@@ -29,10 +29,10 @@ public class SimpleIterationMethod {
         }
 
         if (is_result) {
-            System.out.println("We found result during " + iterationCount + " iteration");
+            System.out.println("Result is found during " + iterationCount + " iteration");
             System.out.println("x = " + result + " f(x) = " + func(result));
         } else {
-            System.out.println("Solution not found within 20 iterations.");
+            System.out.println("Solution is not found within 20 iterations.");
         }
     }
 

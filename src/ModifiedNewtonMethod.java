@@ -28,10 +28,10 @@ public class ModifiedNewtonMethod {
         }
 
         if (is_result) {
-            System.out.println("We found result during " + iterationCount + " iteration");
+            System.out.println("Result is found during " + iterationCount + " iteration");
             System.out.println("x = " + result + " f(x) = " + func(result));
         } else {
-            System.out.println("Solution not found within 20 iterations.");
+            System.out.println("Solution is not found within 20 iterations.");
         }
     }
 

@@ -19,7 +19,7 @@ public class Main {
                 continue;
             }
 
-            System.out.println("Choose the method of solving the function.");
+            System.out.println("Choose the method. Enter 1 or 2.");
             System.out.println("1 - Simple Iteration Method");
             System.out.println("2 - Modified Newton Method");
             System.out.println("Enter: ");
