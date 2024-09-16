@@ -24,10 +24,12 @@ public class ModifiedNewtonMethod {
                 iterationCount = i;
                 is_result = true;
                 result = x_n_next;
+                break;
             }
         }
 
         if (is_result) {
+            System.out.println("n(E) = " + n_e(-1.95, epsilon));
             System.out.println("Result is found during " + iterationCount + " iteration");
             System.out.println("x = " + result + " f(x) = " + func(result));
         } else {
@@ -41,5 +43,14 @@ public class ModifiedNewtonMethod {
 
     public static double funcDerivative(double x) {
         return 2 * x + 4 * cos(x);
+    }
+
+    public static double n_e(double x, double e) {
+        double m1 = 5.09;
+        double M2 = 5.79;
+        double z = 0.05;
+        double q = (M2 * z)/(2 * m1);
+
+        return Math.log(((Math.log(0.05/e)/Math.log(1/q)) + 1)/Math.log(2)) + 1;
     }
 }

@@ -25,10 +25,12 @@ public class SimpleIterationMethod {
                 iterationCount = i;
                 is_result = true;
                 result = x_n_next;
+                break;
             }
         }
 
         if (is_result) {
+            System.out.println("n(E) = " + n_e(-1.95, epsilon));
             System.out.println("Result is found during " + iterationCount + " iteration");
             System.out.println("x = " + result + " f(x) = " + func(result));
         } else {
@@ -40,11 +42,14 @@ public class SimpleIterationMethod {
         return x * x + 4 * sin(x);
     }
 
-    public static double funcDerivative(double x) {
-        return 2 * x + 4 * cos(x);
-    }
-
     public static double funcIter(double x) {
         return -sqrt(-4 * sin(x));
+    }
+
+    public static double n_e(double x, double e) {
+        double q = 0.44;
+        double z = 0.02235; // |φ(x0) - x0|
+
+        return ((Math.log(z/((1-q)*e)))/(Math.log(1/q))) + 1;
     }
 }
